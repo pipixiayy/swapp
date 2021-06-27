@@ -3,39 +3,27 @@ package com.yh.swaggerpro.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * <p>
- * 
- * </p>
- *
- * @author yh
- * @since 2021-05-26
+ * @program: swagger-pro
+ * @Date: 2021/6/27 11:45
+ * @Author: YH
+ * @Description:
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@ApiModel(value="JdComputer对象", description="")
-public class JdComputer implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class Upload implements Serializable {
 
     @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 
-    private String code;
+    private Integer mpId;
 
-    private Double money;
-
-    private String name;
-
-    private String status;
+    private String filename;
 
     @ApiModelProperty(required = true,example = "1997-01-01 00:00:00",value = "创建时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -44,6 +32,4 @@ public class JdComputer implements Serializable {
     @ApiModelProperty(required = true,example = "1997-01-01 00:00:00",value = "修改时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date endtime;
-
-
 }

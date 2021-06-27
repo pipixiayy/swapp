@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yh.swaggerpro.mapper.FileUploadMapper">
+
+    <insert id="batchInsert" parameterType="list" keyProperty="id" keyColumn="id" useGeneratedKeys="true">
+        insert into upload
+        (mp_id,
+        filename,
+        creatime) values
+        <foreach collection="list" item="up" index="index" separator=",">
+            (#{up.mpId},
+            #{up.filename},
+            SYSDATE() )
+        </foreach>
+    </insert>
+
+</mapper>

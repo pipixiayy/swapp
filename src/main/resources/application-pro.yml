@@ -1,0 +1,27 @@
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.wyu.itblog.article.model
+  type-aliases-package: com.yh.swaggerpro.entity
+  global-config:
+    refresh-mapper: true
+  configuration:
+    #指定 MyBatis 所用日志的具体实现，未指定时将自动查找。
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  devtools:
+    restart:
+      #热部署生效
+      enabled: true
+        #设置重启的目录
+        #additional-paths: src/main/java
+      #classpath目录下的WEB-INF文件夹内容修改不重启
+#      exclude: WEB-INF/**
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+
+filePath: /data/
+

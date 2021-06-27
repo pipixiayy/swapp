@@ -13,7 +13,10 @@ public enum StatusCode {
     loginSuccess("0000","登录成功"),
     loginFail("9999","用户不存在"),
     loginFailPassword("8888","用户密码错误"),
-    LoginError("6666","登录异常");
+    fileLoadSuccess("6666","文件上传成功"),
+    fileLoadType("6432","文件上传成功"),
+    fileLoadFail("6888","文件上传异常"),
+    LoginError("6543","登录异常");
 
     private String code;
     private String msg;

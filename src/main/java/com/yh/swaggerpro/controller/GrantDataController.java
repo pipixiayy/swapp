@@ -1,8 +1,6 @@
 package com.yh.swaggerpro.controller;
 
 
-import com.yh.swaggerpro.service.GrantDataService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GrantDataController {
 
-    @Autowired
-    GrantDataService grantDataService;
+    /*@Autowired
+    GrantDataService grantDataService;*/
 
 
 }
