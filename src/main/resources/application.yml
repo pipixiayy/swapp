@@ -19,6 +19,8 @@ spring:
   # 切换环境配置
   profiles:
     active: dev
+#  aop:
+#    auto: true #启动aop配置
 
 # 指定某个包下的日志级别
 logging:
@@ -28,3 +30,6 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p - [%t] %X{log_id} %logger{39} : %m%n%wEx"
     level:
       root: info
+
+test:
+  value: 8888999

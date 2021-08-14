@@ -2,6 +2,7 @@ package com.yh.swaggerpro.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yh.swaggerpro.entity.JdComputer;
+import com.yh.swaggerpro.entity.ReqJdcomputer;
 import com.yh.swaggerpro.reponse.DataResponse;
 
 import java.util.List;
@@ -16,4 +17,9 @@ import java.util.List;
  */
 public interface JdComputerService extends IService<JdComputer> {
     DataResponse<List<JdComputer>> queryComputerList(JdComputer jdComputer);
+
+    DataResponse<ReqJdcomputer> queryReqJd (Long id);
+
+    void insertData();
+    List<JdComputer> queryList(String limit);
 }

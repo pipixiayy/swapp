@@ -5,6 +5,7 @@ import com.yh.swaggerpro.reponse.DataResponse;
 import com.yh.swaggerpro.service.JobUserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +28,7 @@ public class LoginController {
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ApiOperation(value = "登录", notes = "登录方法")
-    public DataResponse<JobUser> login(@RequestParam String jobCode, @RequestParam String password, HttpSession httpSession){
+    public DataResponse<JobUser> login(@Validated @RequestParam String jobCode, @RequestParam String password, HttpSession httpSession){
         return jobUserService.queryLogin(jobCode,password,httpSession);
     }
 
